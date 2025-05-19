@@ -80,9 +80,11 @@ body {
 
 .card-opacity {
   opacity: 50%;
+  transition: opacity 0.3s ease;
 }
 .card-opacity:hover {
   opacity: 100%;
+  
 }
 
 .card-opacity-set {

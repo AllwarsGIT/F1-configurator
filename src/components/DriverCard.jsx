@@ -11,7 +11,7 @@ function DriverCard({ name= "Driver" , team="Team" }){
   }
 
   return (
-    <div className={fixedOpacity ? '' : 'card-container'}>
+    <div className={fixedOpacity ? '' : 'card-opacity'}>
       <div className="card-rotate">
            <div className={`card ${activeGradient ? 'active-gradient' : ''} ${fixedOpacity ? 'card-opacity-set' : ''}`}onClick={ handleClick}>
               <h3>{name}</h3>
