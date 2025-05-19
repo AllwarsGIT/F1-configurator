@@ -4,9 +4,15 @@ body {
   color: hsla(0, 0%, 100%);
 }
 
-.header-test {
+.container-cards {
   display: flex;
   justify-content: center;
+}
+
+h1 {
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+  margin-top: 20px;
 }
 
 .card img {

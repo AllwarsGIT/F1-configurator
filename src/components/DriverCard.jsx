@@ -1,25 +1,16 @@
-import React, { useState } from 'react';
-
-function DriverCard({ name= "Driver" , team="Team" }){
-
-  const [activeGradient, setActiveGradient] = useState(false);
-  const [fixedOpacity, setFixedOpacity] = useState(false);
-
-  const handleClick = () => {
-    setActiveGradient(!activeGradient);
-    setFixedOpacity(!fixedOpacity);
-  }
-
+function DriverCard({ name = "Car", price = "Price", isActive, onActivate }) {
   return (
-    <div className={fixedOpacity ? '' : 'card-opacity'}>
+    <div className={isActive ? '' : 'card-opacity'}>
       <div className="card-rotate">
-           <div className={`card ${activeGradient ? 'active-gradient' : ''} ${fixedOpacity ? 'card-opacity-set' : ''}`}onClick={ handleClick}>
-              <h3>{name}</h3>
-              <h4>{team}</h4>
-          </div>
+        <div
+          className={`card ${isActive ? 'active-gradient card-opacity-set' : ''}`}
+          onClick={onActivate}
+        >
+          <h3>{name}</h3>
+          <h4>{price}</h4>
+        </div>
       </div>
     </div>
-
   );
 }
 

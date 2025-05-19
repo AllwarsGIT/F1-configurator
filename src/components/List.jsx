@@ -1,12 +1,11 @@
-
-
-function  List({ items }) {
+// eslint-disable-next-line no-unused-vars
+function List({ items = [], CardComponent }) {
   return (
-    <ul>
+    <div className="container-cards">
       {items.map((item, index) => (
-        <li key={index}>{item}</li>
+        <CardComponent key={index} {...item} />
       ))}
-    </ul>
+    </div>
   );
 }
 
